@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="ttk.Frame" id="frame1">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout manager="grid">
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object class="ttk.Label" id="label1">
+        <property name="background">#ffffff</property>
+        <property name="font">{arial} 24 {}</property>
+        <property name="text" translatable="yes">CUBbC App</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label2">
+        <property name="image">Logo.PNG</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.builder.widgets.scrollbarhelper" id="scrollbarhelper1">
+        <property name="scrolltype">both</property>
+        <property name="usemousewheel">false</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+        <child>
+          <object class="tk.Listbox" id="listbox1">
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="button1">
+        <property name="command" type="command" cbtype="simple">insert_team</property>
+        <property name="text" translatable="yes">Insert a Team</property>
+        <property name="width">16</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Menu" id="menu1">
+    <child>
+      <object class="tk.Menuitem.Submenu" id="submenu1">
+        <property name="label" translatable="yes">File</property>
+        <property name="tearoff">false</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="command1">
+            <property name="command" type="command" cbtype="simple">new</property>
+            <property name="label" translatable="yes">new</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command2">
+            <property name="command" type="command" cbtype="simple">load_standings</property>
+            <property name="label" translatable="yes">Load Standings</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command">
+            <property name="command" type="command" cbtype="simple">load_scores</property>
+            <property name="label" translatable="yes">Load Scores</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command4">
+            <property name="command" type="command" cbtype="simple">save</property>
+            <property name="label" translatable="yes">Save</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command7">
+            <property name="command" type="command" cbtype="simple">close</property>
+            <property name="label" translatable="yes">Close</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="submenu3">
+        <property name="label" translatable="yes">Options</property>
+        <property name="tearoff">false</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="command5">
+            <property name="command" type="command" cbtype="simple">print_scores</property>
+            <property name="compound">top</property>
+            <property name="label" translatable="yes">Print Results</property>
+            <property name="state">normal</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="command6">
+            <property name="command" type="command" cbtype="simple">print_standings</property>
+            <property name="label" translatable="yes">Print Standings</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
